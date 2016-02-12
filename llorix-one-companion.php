@@ -1,0 +1,75 @@
+<?php
+/*
+Plugin Name: Llorix One Companion
+Plugin URI: https://github.com/Codeinwp/llorix-one-companion
+Description: Add Our team, Our Services and Testimonials sections to Llorix One theme.
+Version: 1.0.0
+Author: Themeisle
+Author URI: http://themeisle.com
+Domain Path: /languages
+License: GPLv2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+if ( ! function_exists( 'add_action' ) ) {
+	die( 'Nothing to do...' );
+}
+
+/* Important constants */
+define( 'LLORIX_ONE_COMPANION_VERSION', '1.0.0' );
+define( 'LLORIX_ONE_COMPANION_URL', plugin_dir_url( __FILE__ ) );
+define( 'LLORIX_ONE_COMPANION_PATH', plugin_dir_path( __FILE__ ) );
+
+/* Required helper functions */
+include_once( dirname( __FILE__ ) . '/inc/settings.php' );
+
+/**
+ * Load plugin textdomain.
+ *
+ * @since 1.0.0
+ */
+
+add_action( 'plugins_loaded', 'llorix_one_companion_load_textdomain' );
+
+function llorix_one_companion_load_textdomain() {
+	load_plugin_textdomain( 'llorix-one', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+
+/* Check if Llorix One theme is activated */
+
+if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] ) {	
+    add_action( 'admin_notices', 'llorix_one_companion_admin_notices', 0 );
+}	
+
+function llorix_one_companion_requirements() {
+	
+	$llorix_one_companion_errors = array();
+	$theme = wp_get_theme();
+	
+	if ( ('Llorix One' != $theme->name) && ('Llorix One' != $theme->parent_theme) ) {
+
+		$llorix_one_companion_errors[] = __( 'You need to have <a href="http://themeisle.com/themes/llorix-one/" target="_blank">Llorix One</a> theme in order to use Llorix One Companion plugin.','llorix-one-companion' );
+	}
+	
+	return $llorix_one_companion_errors;
+
+}
+
+function llorix_one_companion_admin_notices()
+{
+
+    $llorix_one_companion_errors = llorix_one_companion_requirements();
+
+    if ( empty ( $llorix_one_companion_errors ) )
+        return;
+
+    /* Suppress "Plugin activated" notice. */
+    unset( $_GET['activate'] );
+	
+	echo '<div class="notice error my-acf-notice is-dismissible">';
+		echo '<p>'.join($llorix_one_companion_errors).'</p>';
+        echo '<p>'.__( '<i>Llorix One Companion</i> has been deactivated.', 'llorix-one-companion' ).'</p>';
+    echo '</div>';
+
+    deactivate_plugins( plugin_basename( __FILE__ ) );
+}
