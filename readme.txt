@@ -6,8 +6,8 @@ Tested up to: 4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add Our team, Our Services and Testimonials sections to Llorix One theme.
+Add Our team, Our Services and Testimonials sections to Llorix One Lite theme.
 
 == Description ==
 
-Add Our team, Our Services and Testimonials sections to Llorix One theme.
+Add Our team, Our Services and Testimonials sections to Llorix One Lite theme.

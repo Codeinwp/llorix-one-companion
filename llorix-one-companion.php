@@ -2,7 +2,7 @@
 /*
 Plugin Name: Llorix One Companion
 Plugin URI: https://github.com/Codeinwp/llorix-one-companion
-Description: Add Our team, Our Services and Testimonials sections to Llorix One theme.
+Description: Add Our team, Our Services and Testimonials sections to Llorix One Lite theme.
 Version: 1.0.0
 Author: Themeisle
 Author URI: http://themeisle.com
@@ -46,9 +46,9 @@ function llorix_one_companion_requirements() {
 	$llorix_one_companion_errors = array();
 	$theme = wp_get_theme();
 	
-	if ( ('Llorix One' != $theme->name) && ('Llorix One' != $theme->parent_theme) ) {
+	if ( ('Llorix One Lite' != $theme->name) && ('Llorix One Lite' != $theme->parent_theme) ) {
 
-		$llorix_one_companion_errors[] = __( 'You need to have <a href="http://themeisle.com/themes/llorix-one/" target="_blank">Llorix One</a> theme in order to use Llorix One Companion plugin.','llorix-one-companion' );
+		$llorix_one_companion_errors[] = __( 'You need to have <a href="https://wordpress.org/themes/llorix-one-lite/" target="_blank">Llorix One Lite</a> theme in order to use Llorix One Companion plugin.','llorix-one-companion' );
 	}
 	
 	return $llorix_one_companion_errors;
