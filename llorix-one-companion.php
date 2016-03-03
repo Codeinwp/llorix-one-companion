@@ -23,6 +23,21 @@ define( 'LLORIX_ONE_COMPANION_PATH', plugin_dir_path( __FILE__ ) );
 /* Required helper functions */
 include_once( dirname( __FILE__ ) . '/inc/settings.php' );
 
+/* Add new sections in Llorix One */
+function llorix_one_companion_sections() {
+	return array(
+			'sections/llorix_one_lite_logos_section',
+			'llorix_one_lite_our_services_section',
+			'sections/llorix_one_lite_our_story_section',
+			'llorix_one_lite_our_team_section',
+			'llorix_one_lite_happy_customers_section',
+			'sections/llorix_one_lite_ribbon_section',
+			'sections/llorix_one_lite_latest_news_section',
+			'sections/llorix_one_lite_contact_info_section',
+			'sections/llorix_one_lite_map_section'
+			);
+}
+
 /**
  * Load plugin textdomain.
  *
@@ -33,6 +48,8 @@ add_action( 'plugins_loaded', 'llorix_one_companion_load_textdomain' );
 
 function llorix_one_companion_load_textdomain() {
 	load_plugin_textdomain( 'llorix-one', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	
+	add_filter('llorix_one_companion_sections_filter', 'llorix_one_companion_sections');
 }
 
 /* Check if Llorix One theme is activated */
@@ -72,4 +89,13 @@ function llorix_one_companion_admin_notices()
     echo '</div>';
 
     deactivate_plugins( plugin_basename( __FILE__ ) );
+}
+
+/* Register style sheet. */
+add_action( 'wp_enqueue_scripts', 'llorix_one_companion_register_plugin_styles' );
+
+function llorix_one_companion_register_plugin_styles() {
+	
+	wp_enqueue_style( 'llorix-one-companion-style', LLORIX_ONE_COMPANION_URL.'/css/style.css' );
+	
 }
