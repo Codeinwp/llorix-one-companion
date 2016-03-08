@@ -4,6 +4,7 @@
 <?php
 	global $wp_customize;
 	$llorix_one_lite_our_team_title = get_theme_mod('llorix_one_lite_our_team_title',esc_html__('Our Team','llorix-one'));
+	$llorix_one_lite_our_team_background = get_theme_mod('llorix_one_lite_our_team_background',llorix_one_lite_get_file('/images/background-images/parallax-img/team-img.jpg'));
 	$llorix_one_lite_our_team_subtitle = get_theme_mod('llorix_one_lite_our_team_subtitle',esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one'));
 	$llorix_one_lite_team_content = get_theme_mod('llorix_one_lite_team_content',
 		json_encode(
@@ -15,9 +16,15 @@
 		)
 	);
 
-	if(!empty($llorix_one_lite_our_team_title) || !empty($llorix_one_lite_our_team_subtitle) || !llorix_one_lite_general_repeater_is_empty($llorix_one_lite_team_content) ){
+	if( !empty($llorix_one_lite_our_team_title) || !empty($llorix_one_lite_our_team_subtitle) || !llorix_one_lite_general_repeater_is_empty($llorix_one_lite_team_content) ){
+		
+		if( !empty($llorix_one_lite_our_team_background) ) {
+			echo '<section class="team" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one').'" style="background:url('.$llorix_one_lite_our_team_background.');">';
+		}
+		else {
+			echo '<section class="team" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one').'">';
+		}
 ?>
-		<section class="team" id="team" role="region" aria-label="<?php esc_html_e('Team','llorix-one') ?>">
 			<div class="section-overlay-layer">
 				<div class="container">
 
