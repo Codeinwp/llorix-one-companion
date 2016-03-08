@@ -187,7 +187,6 @@
 .team {
 	background-color: #FFF;	
 	border-bottom: 1px solid #eaebec;
-	background: url(../images/team-img.jpg);
 	background-position: 50% 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -253,10 +252,13 @@
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
+	width: 183px;
+	height: 183px;
 }
 
 .member-pic img {
-	width: 100%;
+	width: 183px;
+	height: 183px;
 }
 
 .member-details {
@@ -265,8 +267,8 @@
 	color: #FFF;
 	display: table;
 	overflow: hidden;
-	height: 266px;
-	width: 100%;
+	height: 183px;
+	width: 183px;
 	bottom: 100%;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -309,3 +311,11 @@
 	transition: all 0.3s;
 	background: rgba(241,108,32,0.7);
 }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	.team-member-wrap .team-member-box {
+	    padding-right: 30px;
+	    padding-left: 30px;
+	}
+}
+
