@@ -12,6 +12,19 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		'priority'    => 40,
 	));
 	
+	/* Services show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_our_services_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	
+	$wp_customize->add_control( 'llorix_one_lite_our_services_show', array(
+		'type' => 'checkbox',
+		'label' => __('Disable the Services section?','llorix-companion'),
+		'section' => 'llorix_one_lite_services_section',
+		'priority'    => 1,
+	));
+	
 	/* Services title */
 	$wp_customize->add_setting( 'llorix_one_lite_our_services_title', array(
 		'default' => esc_html__('Our Services','llorix-companion'),
@@ -69,6 +82,19 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'llorix_one_lite_team_section' , array(
 			'title'       => esc_html__( 'Team section', 'llorix-companion' ),
 			'priority'    => 50,
+	));
+	
+	/* Team show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_our_team_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	
+	$wp_customize->add_control( 'llorix_one_lite_our_team_show', array(
+		'type' => 'checkbox',
+		'label' => __('Disable the Team section?','llorix-companion'),
+		'section' => 'llorix_one_lite_team_section',
+		'priority'    => 1,
 	));
 	
 	/* Team title */
@@ -135,8 +161,21 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	/********************************************************/
 	
 	$wp_customize->add_section( 'llorix_one_lite_testimonials_section' , array(
-		'title'       => esc_html__( 'Testimonial section', 'llorix-companion' ),
+		'title'       => esc_html__( 'Testimonials section', 'llorix-companion' ),
 		'priority'    => 55,
+	));
+	
+	/* Testimonials show/hide */
+	$wp_customize->add_setting( 'llorix_one_lite_happy_customers_show', array(
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	
+	$wp_customize->add_control( 'llorix_one_lite_happy_customers_show', array(
+		'type' => 'checkbox',
+		'label' => __('Disable the Testimonials section?','llorix-companion'),
+		'section' => 'llorix_one_lite_testimonials_section',
+		'priority'    => 1,
 	));
 	
 	/* Testimonials title */
