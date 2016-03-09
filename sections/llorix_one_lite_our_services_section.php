@@ -6,14 +6,14 @@
 	
 	$llorix_one_lite_our_services_show = get_theme_mod('llorix_one_lite_our_services_show');
 	
-	$llorix_one_lite_our_services_title = get_theme_mod('llorix_one_lite_our_services_title',esc_html__('Our Services','llorix-one'));
-	$llorix_one_lite_our_services_subtitle = get_theme_mod('llorix_one_lite_our_services_subtitle',esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one'));
+	$llorix_one_lite_our_services_title = get_theme_mod('llorix_one_lite_our_services_title',esc_html__('Our Services','llorix-one-companion'));
+	$llorix_one_lite_our_services_subtitle = get_theme_mod('llorix_one_lite_our_services_subtitle',esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-companion'));
 	$llorix_one_lite_services = get_theme_mod('llorix_one_lite_services_content',
 		json_encode(
 			array(
-					array('choice'=>'llorix_one_lite_icon','icon_value' => 'fa-cogs','title' => esc_html__('Lorem Ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one')),
-					array('choice'=>'llorix_one_lite_icon','icon_value' => 'fa-bar-chart-o','title' => esc_html__('Lorem Ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one')),
-					array('choice'=>'llorix_one_lite_icon','icon_value' => 'fa-globe','title' => esc_html__('Lorem Ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one'))
+					array('choice'=>'llorix_one_lite_icon','icon_value' => 'fa-cogs','title' => esc_html__('Lorem Ipsum','llorix-one-companion'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one-companion')),
+					array('choice'=>'llorix_one_lite_icon','icon_value' => 'fa-bar-chart-o','title' => esc_html__('Lorem Ipsum','llorix-one-companion'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one-companion')),
+					array('choice'=>'llorix_one_lite_icon','icon_value' => 'fa-globe','title' => esc_html__('Lorem Ipsum','llorix-one-companion'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.','llorix-one-companion'))
 			)
 		)
 	);
@@ -23,7 +23,7 @@
 
 		if(!empty($llorix_one_lite_our_services_title) || !empty($llorix_one_lite_our_services_subtitle) || !llorix_one_lite_general_repeater_is_empty($llorix_one_lite_services)){
 	?>
-			<section class="services" id="services" role="region" aria-label="<?php esc_html_e('Services','llorix-one') ?>">
+			<section class="services" id="services" role="region" aria-label="<?php esc_html_e('Services','llorix-one-companion') ?>">
 				<div class="section-overlay-layer">
 					<div class="container">
 
@@ -95,11 +95,11 @@
 																		
 																		$llorix_one_lite_link_services = icl_t('Featured Area',$llorix_one_lite_service_box->id.'_services_link',$llorix_one_lite_service_box->link);
 																		
-																		echo '<a href="'.esc_url($llorix_one_lite_link_services).'"><img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one').'"/></a>';
+																		echo '<a href="'.esc_url($llorix_one_lite_link_services).'"><img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one-companion').'"/></a>';
 																		
 																	} else {
 																		
-																		echo '<a href="'.esc_url($llorix_one_lite_service_box->link).'"><img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one').'"/></a>';
+																		echo '<a href="'.esc_url($llorix_one_lite_service_box->link).'"><img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one-companion').'"/></a>';
 																	}	
 																	
 																}
@@ -107,7 +107,7 @@
 																if(!empty($llorix_one_lite_service_box->title)){
 																	echo '<img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.$llorix_one_lite_service_box->title.'"/>';
 																} else {
-																	echo '<img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one').'"/>';
+																	echo '<img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one-companion').'"/>';
 																}
 															}
 														}
@@ -153,7 +153,7 @@
 	/* If section is disabled, but we are in Customize, display section with class llorix_one_lite_only_customizer */	
 	} elseif( isset( $wp_customize ) ) {
 		?>
-		<section class="services llorix_one_lite_only_customizer" id="services" role="region" aria-label="<?php esc_html_e('Services','llorix-one') ?>">
+		<section class="services llorix_one_lite_only_customizer" id="services" role="region" aria-label="<?php esc_html_e('Services','llorix-one-companion') ?>">
 			<div class="section-overlay-layer">
 				<div class="container">
 
@@ -225,11 +225,11 @@
 																	
 																	$llorix_one_lite_link_services = icl_t('Featured Area',$llorix_one_lite_service_box->id.'_services_link',$llorix_one_lite_service_box->link);
 																	
-																	echo '<a href="'.esc_url($llorix_one_lite_link_services).'"><img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one').'"/></a>';
+																	echo '<a href="'.esc_url($llorix_one_lite_link_services).'"><img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one-companion').'"/></a>';
 																	
 																} else {
 																	
-																	echo '<a href="'.esc_url($llorix_one_lite_service_box->link).'"><img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one').'"/></a>';
+																	echo '<a href="'.esc_url($llorix_one_lite_service_box->link).'"><img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one-companion').'"/></a>';
 																}	
 																
 															}
@@ -237,7 +237,7 @@
 															if(!empty($llorix_one_lite_service_box->title)){
 																echo '<img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.$llorix_one_lite_service_box->title.'"/>';
 															} else {
-																echo '<img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one').'"/>';
+																echo '<img src="'.esc_url($llorix_one_lite_service_box->image_url).'" alt="'.esc_html__('Featured Image','llorix-one-companion').'"/>';
 															}
 														}
 													}

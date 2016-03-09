@@ -6,15 +6,15 @@
 	
 	$llorix_one_lite_our_team_show = get_theme_mod('llorix_one_lite_our_team_show');
 	
-	$llorix_one_lite_our_team_title = get_theme_mod('llorix_one_lite_our_team_title',esc_html__('Our Team','llorix-one'));
+	$llorix_one_lite_our_team_title = get_theme_mod('llorix_one_lite_our_team_title',esc_html__('Our Team','llorix-one-companion'));
 	$llorix_one_lite_our_team_background = get_theme_mod('llorix_one_lite_our_team_background',llorix_one_lite_get_file('/images/background-images/parallax-img/team-img.jpg'));
-	$llorix_one_lite_our_team_subtitle = get_theme_mod('llorix_one_lite_our_team_subtitle',esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one'));
+	$llorix_one_lite_our_team_subtitle = get_theme_mod('llorix_one_lite_our_team_subtitle',esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-companion'));
 	$llorix_one_lite_team_content = get_theme_mod('llorix_one_lite_team_content',
 		json_encode(
 			array(
-					array('image_url' => llorix_one_lite_get_file('/images/team/1.jpg'),'title' => esc_html__('Albert Jacobs','llorix-one'),'subtitle' => esc_html__('Founder & CEO','llorix-one')),
-					array('image_url' => llorix_one_lite_get_file('/images/team/2.jpg'),'title' => esc_html__('Tonya Garcia','llorix-one'),'subtitle' => esc_html__('Account Manager','llorix-one')),
-					array('image_url' => llorix_one_lite_get_file('/images/team/3.jpg'),'title' => esc_html__('Linda Guthrie','llorix-one'),'subtitle' => esc_html__('Business Development','llorix-one'))
+					array('image_url' => llorix_one_lite_get_file('/images/team/1.jpg'),'title' => esc_html__('Albert Jacobs','llorix-one-companion'),'subtitle' => esc_html__('Founder & CEO','llorix-one-companion')),
+					array('image_url' => llorix_one_lite_get_file('/images/team/2.jpg'),'title' => esc_html__('Tonya Garcia','llorix-one-companion'),'subtitle' => esc_html__('Account Manager','llorix-one-companion')),
+					array('image_url' => llorix_one_lite_get_file('/images/team/3.jpg'),'title' => esc_html__('Linda Guthrie','llorix-one-companion'),'subtitle' => esc_html__('Business Development','llorix-one-companion'))
 			)
 		)
 	);
@@ -25,10 +25,10 @@
 		if( !empty($llorix_one_lite_our_team_title) || !empty($llorix_one_lite_our_team_subtitle) || !llorix_one_lite_general_repeater_is_empty($llorix_one_lite_team_content) ){
 			
 			if( !empty($llorix_one_lite_our_team_background) ) {
-				echo '<section class="team" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one').'" style="background:url('.$llorix_one_lite_our_team_background.');">';
+				echo '<section class="team" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one-companion').'" style="background:url('.$llorix_one_lite_our_team_background.');">';
 			}
 			else {
-				echo '<section class="team" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one').'">';
+				echo '<section class="team" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one-companion').'">';
 			}
 	?>
 				<div class="section-overlay-layer">
@@ -72,11 +72,11 @@
 															if( !empty($llorix_one_lite_team_member->title) ){
 																echo '<img src="'.esc_url($llorix_one_lite_team_member->image_url).'" alt="'.esc_attr($llorix_one_lite_team_member->title).'">';
 															} else {
-																echo '<img src="'.esc_url($llorix_one_lite_team_member->image_url).'" alt="'.esc_html__('Avatar','llorix-one').'">';
+																echo '<img src="'.esc_url($llorix_one_lite_team_member->image_url).'" alt="'.esc_html__('Avatar','llorix-one-companion').'">';
 															}
 														} else {
 															$default_url = llorix_one_lite_get_file('/images/team/default.png');
-															echo '<img src="'.$default_url.'" alt="'.esc_html__('Avatar','llorix-one').'">';
+															echo '<img src="'.$default_url.'" alt="'.esc_html__('Avatar','llorix-one-companion').'">';
 														}
 													?>
 												</div><!-- .member-pic -->
@@ -127,10 +127,10 @@
 	} elseif( isset( $wp_customize ) ) {
 		
 		if( !empty($llorix_one_lite_our_team_background) ) {
-			echo '<section class="team llorix_one_lite_only_customizer" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one').'" style="background:url('.$llorix_one_lite_our_team_background.');">';
+			echo '<section class="team llorix_one_lite_only_customizer" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one-companion').'" style="background:url('.$llorix_one_lite_our_team_background.');">';
 		}
 		else {
-			echo '<section class="team llorix_one_lite_only_customizer" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one').'">';
+			echo '<section class="team llorix_one_lite_only_customizer" id="team" role="region" aria-label="'.esc_html__('Team','llorix-one-companion').'">';
 		}
 ?>
 			<div class="section-overlay-layer">
@@ -174,11 +174,11 @@
 														if( !empty($llorix_one_lite_team_member->title) ){
 															echo '<img src="'.esc_url($llorix_one_lite_team_member->image_url).'" alt="'.esc_attr($llorix_one_lite_team_member->title).'">';
 														} else {
-															echo '<img src="'.esc_url($llorix_one_lite_team_member->image_url).'" alt="'.esc_html__('Avatar','llorix-one').'">';
+															echo '<img src="'.esc_url($llorix_one_lite_team_member->image_url).'" alt="'.esc_html__('Avatar','llorix-one-companion').'">';
 														}
 													} else {
 														$default_url = llorix_one_lite_get_file('/images/team/default.png');
-														echo '<img src="'.$default_url.'" alt="'.esc_html__('Avatar','llorix-one').'">';
+														echo '<img src="'.$default_url.'" alt="'.esc_html__('Avatar','llorix-one-companion').'">';
 													}
 												?>
 											</div><!-- .member-pic -->

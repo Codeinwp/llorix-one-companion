@@ -6,14 +6,14 @@
 	
 	$llorix_one_lite_happy_customers_show = get_theme_mod('llorix_one_lite_happy_customers_show');
 	
-	$llorix_one_lite_happy_customers_title = get_theme_mod('llorix_one_lite_happy_customers_title',esc_html__('Happy Customers','llorix-one'));
-	$llorix_one_lite_happy_customers_subtitle = get_theme_mod('llorix_one_lite_happy_customers_subtitle',esc_html__('Cloud computing subscription model out of the box proactive solution.','llorix-one'));
+	$llorix_one_lite_happy_customers_title = get_theme_mod('llorix_one_lite_happy_customers_title',esc_html__('Happy Customers','llorix-one-companion'));
+	$llorix_one_lite_happy_customers_subtitle = get_theme_mod('llorix_one_lite_happy_customers_subtitle',esc_html__('Cloud computing subscription model out of the box proactive solution.','llorix-one-companion'));
 	$llorix_one_lite_testimonials_content = get_theme_mod('llorix_one_lite_testimonials_content',
 		json_encode(
 			array(
-					array('image_url' => llorix_one_lite_get_file('/images/clients/1.jpg'),'title' => esc_html__('Happy Customer','llorix-one'),'subtitle' => esc_html__('Lorem ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one')),
-					array('image_url' => llorix_one_lite_get_file('/images/clients/2.jpg'),'title' => esc_html__('Happy Customer','llorix-one'),'subtitle' => esc_html__('Lorem ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one')),
-					array('image_url' => llorix_one_lite_get_file('/images/clients/3.jpg'),'title' => esc_html__('Happy Customer','llorix-one'),'subtitle' => esc_html__('Lorem ipsum','llorix-one'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one'))
+					array('image_url' => llorix_one_lite_get_file('/images/clients/1.jpg'),'title' => esc_html__('Happy Customer','llorix-one-companion'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-companion'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-companion')),
+					array('image_url' => llorix_one_lite_get_file('/images/clients/2.jpg'),'title' => esc_html__('Happy Customer','llorix-one-companion'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-companion'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-companion')),
+					array('image_url' => llorix_one_lite_get_file('/images/clients/3.jpg'),'title' => esc_html__('Happy Customer','llorix-one-companion'),'subtitle' => esc_html__('Lorem ipsum','llorix-one-companion'),'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Praesent a hendrerit urna. In non imperdiet elit, sed molestie odio. Fusce ac metus non purus sollicitudin laoreet.','llorix-one-companion'))
 			)
 		)
 	);
@@ -23,7 +23,7 @@
 
 		if( !empty($llorix_one_lite_happy_customers_title) || !empty($llorix_one_lite_happy_customers_subtitle) || !llorix_one_lite_general_repeater_is_empty($llorix_one_lite_testimonials_content) ){
 	?>
-		<section class="testimonials" id="customers" role="region" aria-label="<?php esc_html_e('Testimonials','llorix-one') ?>">
+		<section class="testimonials" id="customers" role="region" aria-label="<?php esc_html_e('Testimonials','llorix-one-companion') ?>">
 			<div class="section-overlay-layer">
 				<div class="container">
 
@@ -67,11 +67,11 @@
 														if(!empty($llorix_one_lite_testimonial->title)){
 															echo '<img src="'.esc_url($llorix_one_lite_testimonial->image_url).'" alt="'.$llorix_one_lite_testimonial->title.'">';
 														} else {
-															echo '<img src="'.esc_url($llorix_one_lite_testimonial->image_url).'" alt="'.esc_html('Avatar','llorix-one').'">';
+															echo '<img src="'.esc_url($llorix_one_lite_testimonial->image_url).'" alt="'.esc_html('Avatar','llorix-one-companion').'">';
 														}
 													} else {
 														$default_image = llorix_one_lite_lite_get_file('/images/clients/client-no-image.jpg');
-														echo '<img src="'.esc_url($default_image).'" alt="'.esc_html('Avatar','llorix-one').'">';	
+														echo '<img src="'.esc_url($default_image).'" alt="'.esc_html('Avatar','llorix-one-companion').'">';	
 													}	
 												?>
 											</div>
@@ -143,7 +143,7 @@
 	/* If section is disabled, but we are in Customize, display section with class llorix_one_lite_only_customizer */	
 	} elseif( isset( $wp_customize ) ) {
 	?>
-		<section class="testimonials llorix_one_lite_only_customizer" id="customers" role="region" aria-label="<?php esc_html_e('Testimonials','llorix-one') ?>">
+		<section class="testimonials llorix_one_lite_only_customizer" id="customers" role="region" aria-label="<?php esc_html_e('Testimonials','llorix-one-companion') ?>">
 			<div class="section-overlay-layer">
 				<div class="container">
 
@@ -187,11 +187,11 @@
 														if(!empty($llorix_one_lite_testimonial->title)){
 															echo '<img src="'.esc_url($llorix_one_lite_testimonial->image_url).'" alt="'.$llorix_one_lite_testimonial->title.'">';
 														} else {
-															echo '<img src="'.esc_url($llorix_one_lite_testimonial->image_url).'" alt="'.esc_html('Avatar','llorix-one').'">';
+															echo '<img src="'.esc_url($llorix_one_lite_testimonial->image_url).'" alt="'.esc_html('Avatar','llorix-one-companion').'">';
 														}
 													} else {
 														$default_image = llorix_one_lite_lite_get_file('/images/clients/client-no-image.jpg');
-														echo '<img src="'.esc_url($default_image).'" alt="'.esc_html('Avatar','llorix-one').'">';	
+														echo '<img src="'.esc_url($default_image).'" alt="'.esc_html('Avatar','llorix-one-companion').'">';	
 													}	
 												?>
 											</div>
