@@ -10,6 +10,17 @@
 	*********** SERVICES SECTION **********
 	***************************************/
 	
+	/* llorix_one_lite_our_services_show */
+	wp.customize( 'llorix_one_lite_our_services_show', function( value ) {
+		value.bind( function( to ) {
+			if ( '1' != to ) {
+				$( 'section.services' ).removeClass('llorix_one_lite_only_customizer');
+			} else {
+				$( 'section.services' ).addClass('llorix_one_lite_only_customizer');
+			}
+		} );
+	} );
+	
 	/* llorix_one_lite_our_services_title */
 	wp.customize("llorix_one_lite_our_services_title", function(value) {
         value.bind(function( to ) {
@@ -38,6 +49,17 @@
 	************* TEAM SECTION ************
 	***************************************/
 	
+	/* llorix_one_lite_our_team_show */
+	wp.customize( 'llorix_one_lite_our_team_show', function( value ) {
+		value.bind( function( to ) {
+			if ( '1' != to ) {
+				$( 'section.team' ).removeClass('llorix_one_lite_only_customizer');
+			} else {
+				$( 'section.team' ).addClass('llorix_one_lite_only_customizer');
+			}
+		} );
+	} );
+	
 	/* llorix_one_lite_our_team_title */
 	wp.customize("llorix_one_lite_our_team_title", function(value) {
         value.bind(function( to ) {
@@ -65,6 +87,17 @@
 	/**************************************
 	********* TESTIMONIALS SECTION *********
 	***************************************/
+	
+	/* llorix_one_lite_happy_customers_show */
+	wp.customize( 'llorix_one_lite_happy_customers_show', function( value ) {
+		value.bind( function( to ) {
+			if ( '1' != to ) {
+				$( 'section.testimonials' ).removeClass('llorix_one_lite_only_customizer');
+			} else {
+				$( 'section.testimonials' ).addClass('llorix_one_lite_only_customizer');
+			}
+		} );
+	} );
 	
 	/* llorix_one_lite_happy_customers_title */
 	wp.customize("llorix_one_lite_happy_customers_title", function(value) {
