@@ -10,6 +10,7 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'llorix_one_lite_services_section' , array(
 		'title'       => esc_html__( 'Services section', 'llorix-one-companion' ),
 		'priority'    => 40,
+		'panel'       => 'llorix_one_lite_front_page_sections'
 	));
 	
 	/* Services show/hide */
@@ -34,7 +35,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'llorix_one_lite_our_services_title', array(
 		'label'    => esc_html__( 'Main title', 'llorix-one-companion' ),
 		'section'  => 'llorix_one_lite_services_section',
-		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority'    => 10
 	));
 	
@@ -47,7 +47,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'llorix_one_lite_our_services_subtitle', array(
 		'label'    => esc_html__( 'Subtitle', 'llorix-one-companion' ),
 		'section'  => 'llorix_one_lite_services_section',
-		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority'    => 20
 	));
     
@@ -66,7 +65,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_services_content', array(
 		'label'   => esc_html__('Add new service box','llorix-one-companion'),
 		'section' => 'llorix_one_lite_services_section',
-		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority' => 30,
         'llorix_one_lite_image_control' => true,
         'llorix_one_lite_icon_control' => true,
@@ -80,8 +78,9 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	/********************************************************/
 
 	$wp_customize->add_section( 'llorix_one_lite_team_section' , array(
-			'title'       => esc_html__( 'Team section', 'llorix-one-companion' ),
-			'priority'    => 50,
+		'title'       => esc_html__( 'Team section', 'llorix-one-companion' ),
+		'priority'    => 60,
+		'panel'       => 'llorix_one_lite_front_page_sections'
 	));
 	
 	/* Team show/hide */
@@ -106,7 +105,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'llorix_one_lite_our_team_title', array(
 		'label'    => esc_html__( 'Main title', 'llorix-one-companion' ),
 		'section'  => 'llorix_one_lite_team_section',
-		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority'    => 10,
 	));
 	
@@ -119,7 +117,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'llorix_one_lite_our_team_subtitle', array(
 		'label'    => esc_html__( 'Subtitle', 'llorix-one-companion' ),
 		'section'  => 'llorix_one_lite_team_section',
-		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority'    => 20,
 	));
 	
@@ -131,7 +128,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
  	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'llorix_one_lite_our_team_background', array(
 		'label'    			=> esc_html__( 'Team Background', 'llorix-one-lite' ),
 		'section'  			=> 'llorix_one_lite_team_section',
-		'active_callback' 	=> 'llorix_one_lite_show_on_front',
 		'priority'    		=> 30
  	)));
 	
@@ -149,7 +145,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_team_content', array(
 		'label'   => esc_html__('Add new team member','llorix-one-companion'),
 		'section' => 'llorix_one_lite_team_section',
-		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority' => 40,
         'llorix_one_lite_image_control' => true,
 		'llorix_one_lite_title_control' => true,
@@ -162,7 +157,8 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_section( 'llorix_one_lite_testimonials_section' , array(
 		'title'       => esc_html__( 'Testimonials section', 'llorix-one-companion' ),
-		'priority'    => 55,
+		'priority'    => 70,
+		'panel'       => 'llorix_one_lite_front_page_sections'
 	));
 	
 	/* Testimonials show/hide */
@@ -187,7 +183,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'llorix_one_lite_happy_customers_title', array(
 		'label'    => esc_html__( 'Main title', 'llorix-one-companion' ),
 		'section'  => 'llorix_one_lite_testimonials_section',
-		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority'    => 10,
 	));
 	
@@ -200,7 +195,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'llorix_one_lite_happy_customers_subtitle', array(
 		'label'    => esc_html__( 'Subtitle', 'llorix-one-companion' ),
 		'section'  => 'llorix_one_lite_testimonials_section',
-		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority'    => 20,
 	));
 	
@@ -219,7 +213,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Llorix_One_Lite_General_Repeater( $wp_customize, 'llorix_one_lite_testimonials_content', array(
 		'label'   => esc_html__('Add new testimonial','llorix-one-companion'),
 		'section' => 'llorix_one_lite_testimonials_section',
-		'active_callback' => 'llorix_one_lite_show_on_front',
 		'priority' => 30,
         'llorix_one_lite_image_control' => true,
 		'llorix_one_lite_title_control' => true,
