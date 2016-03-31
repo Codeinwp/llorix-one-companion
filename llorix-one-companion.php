@@ -68,6 +68,10 @@ function llorix_one_companion_requirements() {
 
 		$llorix_one_companion_errors[] = __( 'You need to have <a href="https://wordpress.org/themes/llorix-one-lite/" target="_blank">Llorix One Lite</a> theme in order to use Llorix One Companion plugin.','llorix-one-companion' );
 	}
+
+	if( defined('LLORIX_ONE_PLUS_PATH') ){
+		$llorix_one_companion_errors[] = __( 'There is no need for activating Llorix One Companion. You already have the Plus version of Lloirx One witch include this plugin.','llorix-one-companion');
+	}
 	
 	return $llorix_one_companion_errors;
 
