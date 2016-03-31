@@ -70,7 +70,7 @@ function llorix_one_companion_requirements() {
 	}
 
 	if( defined('LLORIX_ONE_PLUS_PATH') ){
-		$llorix_one_companion_errors[] = __( 'There is no need for activating Llorix One Companion. You already have the Plus version of Lloirx One witch include this plugin.','llorix-one-companion');
+		$llorix_one_companion_errors[] = __( 'There is no need for activating Llorix One Companion. You already have the Plus version of Llorix One which includes this plugin.','llorix-one-companion');
 	}
 	
 	return $llorix_one_companion_errors;
