@@ -27,15 +27,15 @@ include_once( dirname( __FILE__ ) . '/inc/settings.php' );
 /* Add new sections in Llorix One */
 function llorix_one_companion_sections() {
 	return array(
-			'sections/llorix_one_lite_logos_section',
-			'llorix_one_lite_our_services_section',
-			'sections/llorix_one_lite_our_story_section',
-			'llorix_one_lite_our_team_section',
-			'llorix_one_lite_happy_customers_section',
-			'sections/llorix_one_lite_ribbon_section',
-			'sections/llorix_one_lite_latest_news_section',
-			'sections/llorix_one_lite_contact_info_section',
-			'sections/llorix_one_lite_map_section'
+			'logos-section',
+			'our-services-section',
+			'our-story-section',
+			'our-team-section',
+			'happy-customers-section',
+			'ribbon-section',
+			'latest-news-section',
+			'contact-info-section',
+			'map-section'
 			);
 }
 
@@ -69,10 +69,6 @@ function llorix_one_companion_requirements() {
 		$llorix_one_companion_errors[] = __( 'You need to have <a href="https://wordpress.org/themes/llorix-one-lite/" target="_blank">Llorix One Lite</a> theme in order to use Llorix One Companion plugin.','llorix-one-companion' );
 	}
 
-	if( defined('LLORIX_ONE_PLUS_PATH') ){
-		$llorix_one_companion_errors[] = __( 'There is no need for activating Llorix One Companion. You already have the Plus version of Llorix One which includes this plugin.','llorix-one-companion');
-	}
-	
 	return $llorix_one_companion_errors;
 
 }
