@@ -27,16 +27,17 @@ include_once( dirname( __FILE__ ) . '/inc/settings.php' );
 /* Add new sections in Llorix One */
 function llorix_one_companion_sections() {
 	return array(
-			'logos-section',
-			'our-services-section',
-			'our-story-section',
-			'our-team-section',
-			'happy-customers-section',
-			'ribbon-section',
-			'latest-news-section',
-			'contact-info-section',
-			'map-section'
-			);
+		'sections/llorix_one_lite_logos_section',
+		'our-services-section',
+		'sections/llorix_one_lite_our_story_section',
+		'our-team-section',
+		'happy-customers-section',
+		'sections/llorix_one_lite_ribbon_section',
+		'sections/llorix_one_lite_latest_news_section',
+		'sections/llorix_one_lite_content_section',
+		'sections/llorix_one_lite_contact_info_section',
+		'sections/llorix_one_lite_map_section'
+	);
 }
 
 /**
@@ -64,7 +65,7 @@ function llorix_one_companion_requirements() {
 	$llorix_one_companion_errors = array();
 	$theme = wp_get_theme();
 	
-	if ( ('Llorix One Lite' != $theme->name) && ('Llorix One Lite' != $theme->parent_theme) ) {
+	if ( ('Llorix One Lite' != $theme->name) && ('llorix-one-lite' !== $theme->template ) ) {
 
 		$llorix_one_companion_errors[] = __( 'You need to have <a href="https://wordpress.org/themes/llorix-one-lite/" target="_blank">Llorix One Lite</a> theme in order to use Llorix One Companion plugin.','llorix-one-companion' );
 	}
