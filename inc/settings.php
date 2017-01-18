@@ -12,7 +12,8 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'llorix_one_lite_services_section' , array(
 			'title'       => esc_html__( 'Services section', 'llorix-one-companion' ),
 			'priority'    => 40,
-			'panel'       => 'llorix_one_lite_front_page_sections'
+			'panel'       => 'llorix_one_lite_front_page_sections',
+			'active_callback' => 'llorix_one_lite_show_on_front',
 		));
 		
 		/* Services show/hide */
@@ -82,7 +83,8 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'llorix_one_lite_team_section' , array(
 			'title'       => esc_html__( 'Team section', 'llorix-one-companion' ),
 			'priority'    => 60,
-			'panel'       => 'llorix_one_lite_front_page_sections'
+			'panel'       => 'llorix_one_lite_front_page_sections',
+			'active_callback' => 'llorix_one_lite_show_on_front',
 		));
 		
 		/* Team show/hide */
@@ -160,7 +162,8 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'llorix_one_lite_testimonials_section' , array(
 			'title'       => esc_html__( 'Testimonials section', 'llorix-one-companion' ),
 			'priority'    => 70,
-			'panel'       => 'llorix_one_lite_front_page_sections'
+			'panel'       => 'llorix_one_lite_front_page_sections',
+			'active_callback' => 'llorix_one_lite_show_on_front',
 		));
 		
 		/* Testimonials show/hide */
