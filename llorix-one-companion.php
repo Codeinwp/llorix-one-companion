@@ -98,6 +98,6 @@ add_action( 'wp_enqueue_scripts', 'llorix_one_companion_register_plugin_styles' 
 
 function llorix_one_companion_register_plugin_styles() {
 	
-	wp_enqueue_style( 'llorix-one-companion-style', LLORIX_ONE_COMPANION_URL.'/css/style.css' );
+	wp_enqueue_style( 'llorix-one-companion-style', LLORIX_ONE_COMPANION_URL.'css/style.css' );
 	
 }
