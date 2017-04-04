@@ -70,7 +70,7 @@
 															echo '<img src="'.esc_url($llorix_one_lite_testimonial->image_url).'" alt="'.esc_html('Avatar','llorix-one-companion').'">';
 														}
 													} else {
-														$default_image = llorix_one_lite_lite_get_file('/images/clients/client-no-image.jpg');
+														$default_image = llorix_one_lite_get_file('/images/clients/client-no-image.jpg');
 														echo '<img src="'.esc_url($default_image).'" alt="'.esc_html('Avatar','llorix-one-companion').'">';	
 													}	
 												?>
@@ -190,7 +190,7 @@
 															echo '<img src="'.esc_url($llorix_one_lite_testimonial->image_url).'" alt="'.esc_html('Avatar','llorix-one-companion').'">';
 														}
 													} else {
-														$default_image = llorix_one_lite_lite_get_file('/images/clients/client-no-image.jpg');
+														$default_image = llorix_one_lite_get_file('/images/clients/client-no-image.jpg');
 														echo '<img src="'.esc_url($default_image).'" alt="'.esc_html('Avatar','llorix-one-companion').'">';	
 													}	
 												?>
