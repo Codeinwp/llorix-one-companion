@@ -21,8 +21,14 @@ define( 'LLORIX_ONE_COMPANION_VERSION', '1.1.1' );
 define( 'LLORIX_ONE_COMPANION_URL', plugin_dir_url( __FILE__ ) );
 define( 'LLORIX_ONE_COMPANION_PATH', plugin_dir_path( __FILE__ ) );
 
+/**
+ * Require section translations
+ */
+require LLORIX_ONE_COMPANION_PATH . 'inc/translations/general.php';
+
 /* Required helper functions */
 include_once( dirname( __FILE__ ) . '/inc/settings.php' );
+
 
 /* Add new sections in Llorix One */
 function llorix_one_companion_sections() {
