@@ -46,4 +46,5 @@ function llorix_one_companion_sevices_register_strings() {
 	$default = llorix_one_companion_sevices_get_default_content();
 	llorix_one_lite_pll_string_register_helper( 'llorix_one_lite_services_content', $default, 'Services section' );
 }
+
 add_action( 'after_setup_theme', 'llorix_one_companion_sevices_register_strings', 11 );

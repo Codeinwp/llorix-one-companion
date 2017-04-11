@@ -23,15 +23,15 @@ $section_is_empty                    = ! isset( $llorix_one_lite_our_team_show )
                 <div class="section-header">
 	                <?php
 	                if ( ! empty( $llorix_one_lite_our_team_title ) ) {  ?>
-                        <h2 class="dark-text"><?php echo esc_attr( $llorix_one_lite_our_team_title ); ?></h2><div class="colored-line"></div>
+                        <h2 class="dark-text"><?php echo wp_kses_post( $llorix_one_lite_our_team_title ); ?></h2><div class="colored-line"></div>
 		                <?php
 	                } elseif ( is_customize_preview() ) { ?>
-                        <h2 class="dark-text paralax_one_only_customizer"></h2><div class="colored-line paralax_one_only_customizer"></div>
+                        <h2 class="dark-text llorix_one_lite_only_customizer"></h2><div class="colored-line llorix_one_lite_only_customizer"></div>
 		                <?php
 	                }
 
 	                if ( ! empty( $llorix_one_lite_our_team_subtitle ) ) {  ?>
-                        <div class="sub-heading"><?php echo esc_attr( $llorix_one_lite_our_team_subtitle ); ?></div>
+                        <div class="sub-heading"><?php echo wp_kses_post( $llorix_one_lite_our_team_subtitle ); ?></div>
 		                <?php
 	                } elseif ( is_customize_preview() ) { ?>
                         <div class="sub-heading llorix_one_lite_only_customizer"></div>
@@ -57,11 +57,11 @@ $section_is_empty                    = ! isset( $llorix_one_lite_our_team_show )
                                     <div class="member-pic">
 	                                    <?php
 	                                    if ( ! empty( $image ) ) {  ?>
-                                            <img src="<?php echo esc_url( $image ); ?>" <?php echo ( ! empty( $title ) ? 'alt="' . $title . '"' : esc_html__( 'Avatar','llorix-one-companion' ) ); ?>>
+                                            <img src="<?php echo esc_url( $image ); ?>" <?php echo ( ! empty( $title ) ? 'alt="' . esc_attr( $title ) . '"' : esc_attr__( 'Avatar','llorix-one-companion' ) ); ?>>
 		                                    <?php
 	                                    } else {
 		                                    $default_url = llorix_one_lite_get_file( '/images/team/default.png' ); ?>
-                                            <img src="<?php echo esc_url( $default_url ); ?>" alt="<?php esc_html_e( 'Avatar','llorix-one-companion' ); ?>">
+                                            <img src="<?php echo esc_url( $default_url ); ?>" alt="<?php esc_attr_e( 'Avatar','llorix-one-companion' ); ?>">
 		                                    <?php
 	                                    } ?>
                                     </div><!-- .member-pic -->
@@ -72,12 +72,12 @@ $section_is_empty                    = ! isset( $llorix_one_lite_our_team_show )
                                             <div class="member-details-inner">
 	                                            <?php
 	                                            if ( ! empty( $title ) ) {  ?>
-                                                    <h5 class="colored-text"> <?php echo esc_attr( $title ); ?></h5>
+                                                    <h5 class="colored-text"> <?php echo wp_kses_post( $title ); ?></h5>
 		                                            <?php
 	                                            }
 
 	                                            if ( ! empty( $subtitle ) ) {  ?>
-                                                    <div class="small-text"><?php echo esc_attr( $subtitle ); ?></div>
+                                                    <div class="small-text"><?php echo wp_kses_post( $subtitle ); ?></div>
 		                                            <?php
 	                                            } ?>
                                             </div><!-- .member-details-inner -->

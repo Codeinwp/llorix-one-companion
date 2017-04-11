@@ -15,4 +15,5 @@ function llorix_one_companion_filter_translations( $array ) {
 		'translations/translations-testimonials-section',
 	) );
 }
+
 add_filter( 'llorix_one_lite_filter_translations', 'llorix_one_companion_filter_translations' );

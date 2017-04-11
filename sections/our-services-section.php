@@ -20,17 +20,17 @@ $section_is_empty                      = ! isset( $llorix_one_lite_our_services_
             <div class="section-header">
 				<?php
 				if ( ! empty( $llorix_one_lite_our_services_title ) ) { ?>
-                    <h2 class="dark-text"><?php echo esc_attr( $llorix_one_lite_our_services_title ); ?></h2>
+                    <h2 class="dark-text"><?php echo wp_kses_post( $llorix_one_lite_our_services_title ); ?></h2>
                     <div class="colored-line"></div>
 					<?php
 				} elseif ( is_customize_preview() ) { ?>
-                    <h2 class="dark-text paralax_one_only_customizer"></h2>
-                    <div class="colored-line paralax_one_only_customizer"></div>
+                    <h2 class="dark-text llorix_one_lite_only_customizer"></h2>
+                    <div class="colored-line llorix_one_lite_only_customizer"></div>
 					<?php
 				}
 
 				if ( ! empty( $llorix_one_lite_our_services_subtitle ) ) { ?>
-                    <div class="sub-heading"><?php echo esc_attr( $llorix_one_lite_our_services_subtitle ); ?></div>
+                    <div class="sub-heading"><?php echo wp_kses_post( $llorix_one_lite_our_services_subtitle ); ?></div>
 					<?php
 				} elseif ( is_customize_preview() ) { ?>
                     <div class="sub-heading llorix_one_lite_only_customizer"></div>
@@ -47,11 +47,11 @@ $section_is_empty                      = ! isset( $llorix_one_lite_our_services_
 					foreach ( $llorix_one_lite_services_decoded as $llorix_one_lite_service_box ) {
 
 						$choice           = ! empty( $llorix_one_lite_service_box->choice ) ? $llorix_one_lite_service_box->choice : '';
-						$icon             = ! empty( $llorix_one_lite_service_box->icon_value ) ? apply_filters( 'parallax_one_translate_single_string', $llorix_one_lite_service_box->icon_value, 'Services section' ) : '';
-						$image            = ! empty( $llorix_one_lite_service_box->image_url ) ? apply_filters( 'parallax_one_translate_single_string', $llorix_one_lite_service_box->image_url, 'Services section' ) : '';
-						$title            = ! empty( $llorix_one_lite_service_box->title ) ? apply_filters( 'parallax_one_translate_single_string', $llorix_one_lite_service_box->title, 'Services section' ) : '';
-						$text             = ! empty( $llorix_one_lite_service_box->text ) ? apply_filters( 'parallax_one_translate_single_string', $llorix_one_lite_service_box->text, 'Services section' ) : '';
-						$link             = ! empty( $llorix_one_lite_service_box->link ) ? apply_filters( 'parallax_one_translate_single_string', $llorix_one_lite_service_box->link, 'Services section' ) : '';
+						$icon             = ! empty( $llorix_one_lite_service_box->icon_value ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_service_box->icon_value, 'Services section' ) : '';
+						$image            = ! empty( $llorix_one_lite_service_box->image_url ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_service_box->image_url, 'Services section' ) : '';
+						$title            = ! empty( $llorix_one_lite_service_box->title ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_service_box->title, 'Services section' ) : '';
+						$text             = ! empty( $llorix_one_lite_service_box->text ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_service_box->text, 'Services section' ) : '';
+						$link             = ! empty( $llorix_one_lite_service_box->link ) ? apply_filters( 'llorix_one_lite_translate_single_string', $llorix_one_lite_service_box->link, 'Services section' ) : '';
 						$section_is_empty = ( empty( $icon ) || $icon === 'No Icon' && $choice === 'llorix_one_lite_icon' ) && ( empty( $image ) && $choice === 'llorix_one_lite_image' ) && empty( $title ) && empty( $text );
 
 						if ( ! $section_is_empty ) { ?>
@@ -82,11 +82,11 @@ $section_is_empty                      = ! isset( $llorix_one_lite_our_services_
 											if ( ! empty( $image ) ) {
 												if ( ! empty( $link ) ) { ?>
                                                     <a href="<?php echo esc_url( $link ); ?>">
-                                                        <img src="<?php echo esc_url( $image ); ?>" <?php echo( ! empty( $title ) ? 'alt="' . $title . '"' : '' ); ?> />
+                                                        <img src="<?php echo esc_url( $image ); ?>" <?php echo( ! empty( $title ) ? 'alt="' . esc_attr( $title ) . '"' : '' ); ?> />
                                                     </a>
 													<?php
 												} else { ?>
-                                                    <img src="<?php echo esc_url( $image ); ?>" <?php echo( ! empty( $title ) ? 'alt="' . $title . '"' : '' ); ?> />
+                                                    <img src="<?php echo esc_url( $image ); ?>" <?php echo( ! empty( $title ) ? 'alt="' . esc_attr( $title ) . '"' : '' ); ?> />
 													<?php
 												}
 											}
@@ -96,17 +96,17 @@ $section_is_empty                      = ! isset( $llorix_one_lite_our_services_
 									if ( ! empty( $title ) ) {
 										if ( ! empty( $link ) ) { ?>
                                             <h3 class="colored-text">
-                                                <a href="<?php echo esc_url( $link ); ?>"><?php echo esc_attr( $title ); ?></a>
+                                                <a href="<?php echo esc_url( $link ); ?>"><?php echo wp_kses_post( $title ); ?></a>
                                             </h3>
 											<?php
 										} else { ?>
-                                            <h3 class="colored-text"><?php echo esc_attr( $title ); ?></h3>
+                                            <h3 class="colored-text"><?php echo wp_kses_post( $title ); ?></h3>
 											<?php
 										}
 									}
 
 									if ( ! empty( $text ) ) { ?>
-                                        <p><?php echo html_entity_decode( $text ); ?></p>
+                                        <p><?php echo wp_kses_post( $text ); ?></p>
 										<?php
 									} ?>
                                 </div>
