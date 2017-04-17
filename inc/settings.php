@@ -19,7 +19,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		/* Services show/hide */
 		$wp_customize->add_setting( 'llorix_one_lite_our_services_show', array(
 			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-			'transport' => 'postMessage'
 		));
 		
 		$wp_customize->add_control( 'llorix_one_lite_our_services_show', array(
@@ -33,7 +32,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		$wp_customize->add_setting( 'llorix_one_lite_our_services_title', array(
 			'default' => esc_html__('Our Services','llorix-one-companion'),
 			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-			'transport' => 'postMessage'
 		));
 		$wp_customize->add_control( 'llorix_one_lite_our_services_title', array(
 			'label'    => esc_html__( 'Main title', 'llorix-one-companion' ),
@@ -45,7 +43,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		$wp_customize->add_setting( 'llorix_one_lite_our_services_subtitle', array(
 			'default' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-companion'),
 			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-			'transport' => 'postMessage'
 		));
 		$wp_customize->add_control( 'llorix_one_lite_our_services_subtitle', array(
 			'label'    => esc_html__( 'Subtitle', 'llorix-one-companion' ),
@@ -85,7 +82,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		/* Team show/hide */
 		$wp_customize->add_setting( 'llorix_one_lite_our_team_show', array(
 			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-			'transport' => 'postMessage'
 		));
 		
 		$wp_customize->add_control( 'llorix_one_lite_our_team_show', array(
@@ -99,7 +95,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		$wp_customize->add_setting( 'llorix_one_lite_our_team_title', array(
 			'default' => esc_html__('Our Team','llorix-one-companion'),
 			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-			'transport' => 'postMessage'
 		));
 		$wp_customize->add_control( 'llorix_one_lite_our_team_title', array(
 			'label'    => esc_html__( 'Main title', 'llorix-one-companion' ),
@@ -111,7 +106,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		$wp_customize->add_setting( 'llorix_one_lite_our_team_subtitle', array(
 			'default' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit.','llorix-one-companion'),
 			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-			'transport' => 'postMessage'
 		));
 		$wp_customize->add_control( 'llorix_one_lite_our_team_subtitle', array(
 			'label'    => esc_html__( 'Subtitle', 'llorix-one-companion' ),
@@ -159,7 +153,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		/* Testimonials show/hide */
 		$wp_customize->add_setting( 'llorix_one_lite_happy_customers_show', array(
 			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-			'transport' => 'postMessage'
 		));
 		
 		$wp_customize->add_control( 'llorix_one_lite_happy_customers_show', array(
@@ -173,7 +166,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		$wp_customize->add_setting( 'llorix_one_lite_happy_customers_title', array(
 			'default' => esc_html__('Happy Customers','llorix-one-companion'),
 			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-			'transport' => 'postMessage'
 		));
 		$wp_customize->add_control( 'llorix_one_lite_happy_customers_title', array(
 			'label'    => esc_html__( 'Main title', 'llorix-one-companion' ),
@@ -185,7 +177,6 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 		$wp_customize->add_setting( 'llorix_one_lite_happy_customers_subtitle', array(
 			'default' => esc_html__('Cloud computing subscription model out of the box proactive solution.','llorix-one-companion'),
 			'sanitize_callback' => 'llorix_one_lite_sanitize_text',
-			'transport' => 'postMessage'
 		));
 		$wp_customize->add_control( 'llorix_one_lite_happy_customers_subtitle', array(
 			'label'    => esc_html__( 'Subtitle', 'llorix-one-companion' ),
@@ -213,13 +204,4 @@ function llorix_one_companion_customize_register( $wp_customize ) {
 	}
 }
 add_action( 'customize_register', 'llorix_one_companion_customize_register', 999 );
-
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function llorix_companion_customize_preview_js() {
-	wp_enqueue_script( 'llorix_companion_customizer', LLORIX_ONE_COMPANION_URL . '/js/llorix-companion-customizer.js', array( 'customize-preview' ), '1.0.2', true );
-}
-add_action( 'customize_preview_init', 'llorix_companion_customize_preview_js', 10);
-
 ?>
