@@ -11,7 +11,7 @@ $llorix_one_lite_services              = get_theme_mod( 'llorix_one_lite_service
 if ( function_exists( 'llorix_one_lite_general_repeater_is_empty' ) ){
     $content_is_empty = llorix_one_lite_general_repeater_is_empty( $llorix_one_lite_services );
 } else {
-    $content_is_empty = !empty( $llorix_one_lite_services );
+    $content_is_empty = empty( $llorix_one_lite_services );
 }
 $section_is_empty                      = ! isset( $llorix_one_lite_our_services_show ) || $llorix_one_lite_our_services_show == 1 || ( empty( $llorix_one_lite_our_services_title ) && empty( $llorix_one_lite_our_services_subtitle ) && $content_is_empty );
 if(!$section_is_empty) { ?>

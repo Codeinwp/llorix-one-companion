@@ -12,7 +12,7 @@ $llorix_one_lite_team_content        = get_theme_mod( 'llorix_one_lite_team_cont
 if ( function_exists( 'llorix_one_lite_general_repeater_is_empty' ) ){
     $content_is_empty = llorix_one_lite_general_repeater_is_empty( $llorix_one_lite_team_content );
 } else {
-    $content_is_empty = !empty( $llorix_one_lite_team_content );
+    $content_is_empty = empty( $llorix_one_lite_team_content );
 }
 $section_is_empty                    = ! isset( $llorix_one_lite_our_team_show ) || $llorix_one_lite_our_team_show == 1 || ( empty( $llorix_one_lite_our_team_title ) && empty( $llorix_one_lite_our_team_subtitle ) && $content_is_empty );
 if(!$section_is_empty) { ?>
