@@ -3,7 +3,7 @@
 Plugin Name: Llorix One Companion
 Plugin URI: https://github.com/Codeinwp/llorix-one-companion
 Description: Add Our team, Our Services and Testimonials sections to Llorix One Lite theme.
-Version: 1.1.1
+Version: 1.1.2
 Author: Themeisle
 Author URI: http://themeisle.com
 Text Domain: llorix-one-companion
@@ -17,7 +17,7 @@ if ( ! function_exists( 'add_action' ) ) {
 }
 
 /* Important constants */
-define( 'LLORIX_ONE_COMPANION_VERSION', '1.1.1' );
+define( 'LLORIX_ONE_COMPANION_VERSION', '1.1.2' );
 define( 'LLORIX_ONE_COMPANION_URL', plugin_dir_url( __FILE__ ) );
 define( 'LLORIX_ONE_COMPANION_PATH', plugin_dir_path( __FILE__ ) );
 
