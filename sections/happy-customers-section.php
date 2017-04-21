@@ -6,7 +6,10 @@
 $llorix_one_lite_happy_customers_show     = get_theme_mod( 'llorix_one_lite_happy_customers_show' );
 $llorix_one_lite_happy_customers_title    = get_theme_mod( 'llorix_one_lite_happy_customers_title', esc_html__( 'Happy Customers', 'llorix-one-companion' ) );
 $llorix_one_lite_happy_customers_subtitle = get_theme_mod( 'llorix_one_lite_happy_customers_subtitle', esc_html__( 'Cloud computing subscription model out of the box proactive solution.', 'llorix-one-companion' ) );
-$default                                  = llorix_one_companion_testimonials_get_default_content();
+$default = '';
+if( function_exists('llorix_one_companion_testimonials_get_default_content')){
+    $default = llorix_one_companion_testimonials_get_default_content();
+}
 $llorix_one_lite_testimonials_content     = get_theme_mod( 'llorix_one_lite_testimonials_content', $default );
 if ( function_exists( 'llorix_one_lite_general_repeater_is_empty' ) ){
     $content_is_empty = llorix_one_lite_general_repeater_is_empty( $llorix_one_lite_testimonials_content );

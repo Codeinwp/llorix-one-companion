@@ -7,7 +7,10 @@ $llorix_one_lite_our_team_show       = get_theme_mod( 'llorix_one_lite_our_team_
 $llorix_one_lite_our_team_title      = get_theme_mod( 'llorix_one_lite_our_team_title', esc_html__( 'Our Team', 'llorix-one-companion' ) );
 $llorix_one_lite_our_team_background = get_theme_mod( 'llorix_one_lite_our_team_background', llorix_one_lite_get_file( '/images/background-images/parallax-img/team-img.jpg' ) );
 $llorix_one_lite_our_team_subtitle   = get_theme_mod( 'llorix_one_lite_our_team_subtitle', esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'llorix-one-companion' ) );
-$default                             = llorix_one_companion_team_get_default_content();
+$default = '';
+if(function_exists( 'llorix_one_companion_team_get_default_content') ){
+    $default = llorix_one_companion_team_get_default_content();
+}
 $llorix_one_lite_team_content        = get_theme_mod( 'llorix_one_lite_team_content', $default );
 if ( function_exists( 'llorix_one_lite_general_repeater_is_empty' ) ){
     $content_is_empty = llorix_one_lite_general_repeater_is_empty( $llorix_one_lite_team_content );
