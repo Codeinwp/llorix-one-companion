@@ -6,7 +6,10 @@
 $llorix_one_lite_our_services_show     = get_theme_mod( 'llorix_one_lite_our_services_show' );
 $llorix_one_lite_our_services_title    = get_theme_mod( 'llorix_one_lite_our_services_title', esc_html__( 'Our Services', 'llorix-one-companion' ) );
 $llorix_one_lite_our_services_subtitle = get_theme_mod( 'llorix_one_lite_our_services_subtitle', esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'llorix-one-companion' ) );
-$default                               = llorix_one_companion_sevices_get_default_content();
+$default = '';
+if( function_exists('')){
+    $default = llorix_one_companion_sevices_get_default_content();
+}
 $llorix_one_lite_services              = get_theme_mod( 'llorix_one_lite_services_content', $default );
 if ( function_exists( 'llorix_one_lite_general_repeater_is_empty' ) ){
     $content_is_empty = llorix_one_lite_general_repeater_is_empty( $llorix_one_lite_services );
