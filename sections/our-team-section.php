@@ -24,7 +24,7 @@ if(!$section_is_empty) { ?>
     <section class="team <?php if ($section_is_empty) {
         echo 'llorix_one_lite_only_customizer';
     } ?>" id="team" role="region"
-             aria-label="<?php esc_attr_e('Team', 'llorix-one-companion'); ?>" <?php echo !empty($llorix_one_lite_our_team_background) ? 'style="background:url(' . esc_url($llorix_one_lite_our_team_background) . ');"' : ''; ?>>
+             aria-label="<?php esc_attr_e('Team', 'llorix-one-companion'); ?>" <?php echo !empty($llorix_one_lite_our_team_background) ? 'style="background-image:url(' . esc_url($llorix_one_lite_our_team_background) . ');"' : ''; ?>>
         <div class="section-overlay-layer">
             <div class="container">
                 <!-- SECTION HEADER -->
